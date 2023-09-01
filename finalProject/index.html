@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<main>
+
+<section class="sec1">
+    <div class="div">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+
+
+    <div class="div1">
+        <h2>Start Date</h2>
+        <input type="date" class="S-input startDate">
+        <br>
+        <button class="btn">Get Tasks</button>
+    <!-- </div> -->
+    <hr>
+    <!-- <div class="div2"> -->
+        <h2>End Date</h2>
+        <input type="date" class="E-input endDate">
+        <br>
+        <button class="btn">Get Tasks</button>
+    </div>
+
+    <div class="div3">
+        <h2>Status</h2>
+        <div class="btn-bx">
+            <button class="btn1">Completed</button>
+            <button class="btn2">In-Progress</button>
+            <button class="btn3">Cancled</button>
+        </div>
+    </div>
+</section>
+
+<section class="sec2">
+    <header>
+        <h1>Task Management System</h1>
+    </header>
+
+
+
+        <div class="task-planner">
+            <h1>Task Planner</h1>
+            <div class="add-task">
+                <button id="show-form-button">Add Task</button>
+            </div>
+            <div class="parent-task-form" id="task-form" style="display: none;">
+                <h2>Add Parent Task</h2>
+                <form id="parent-task-form">
+                    <label for="task-id">Task ID:</label>
+                    <input type="text" id="task-id" required>
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" required>
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" required>
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" required>
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="In-Progress">In-Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value=" ">DuePassed</option>
+                        <option value="Canceled">Canceled</option>
+                    </select>
+                    <button type="submit">Add</button>
+                    <button type="button" id="cancel-button">Cancel</button>
+                </form>
+            </div>
+            <div class="data-representation">
+                <h2>Data representation of the parent task and subtask</h2>
+                <table id="task-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>StartDate</th>
+                            <th>EndDate</th>
+                            <th>Status</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <!-- Data will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</section>
+
+</main>
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
